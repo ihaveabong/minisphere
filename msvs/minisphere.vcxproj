@@ -365,6 +365,8 @@ xcopy /y /d /e /f "..\docs\*-api.txt" "$(OutDir)documentation\"</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="..\src\minisphere\fs.c" />
+    <ClCompile Include="..\src\minisphere\game.c" />
     <ClCompile Include="..\src\minisphere\vanilla.c" />
     <ClCompile Include="..\src\minisphere\matrix.c" />
     <ClCompile Include="..\src\minisphere\pegasus.c" />
@@ -409,6 +411,8 @@ xcopy /y /d /e /f "..\docs\*-api.txt" "$(OutDir)documentation\"</Command>
     <ClCompile Include="..\src\shared\xoroshiro.c" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\src\minisphere\fs.h" />
+    <ClInclude Include="..\src\minisphere\game.h" />
     <ClInclude Include="..\src\minisphere\vanilla.h" />
     <ClInclude Include="..\src\minisphere\matrix.h" />
     <ClInclude Include="..\src\minisphere\pegasus.h" />
