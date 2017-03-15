@@ -1,6 +1,12 @@
 miniSphere Changelog
 ====================
 
+vX.X.X - TBD
+------------
+
+* Introducing built-in TypeScript support!
+
+
 v4.5.7 - March 14, 2017
 -----------------------
 
