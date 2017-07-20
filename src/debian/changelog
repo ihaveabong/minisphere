@@ -1,3 +1,38 @@
+minisphere (4.7.0~trusty) trusty; urgency=low
+
+  * Adds support for creating 2D (orthographic) and 3D (perspective) projection
+    matrices.
+  * Adds support for setting a clipping rectangle when rendering to a `Surface`.
+  * Adds new `VertexList` and `IndexList` objects, used to store vertices and
+    indices, respectively, directly on the GPU for fast access at render time.
+  * Adds a new `.transform` property to `Surface` which allows changing the
+    surface's projection matrix.
+  * Adds new methods to `Model` for setting shader uniforms: `.setBoolean()`,
+    `.setFloatArray()`, and `.setIntArray()`.
+  * Adds `Socket#connectTo()` which allows the same socket object to be used for
+    multiple sessions.
+  * Adds the engine version number to the string returned by `Sphere.Platform`.
+  * Adds support for the Sphere v1 `CreateSpriteset()` and `Spriteset#save()`
+    functions.
+  * Changes the signature of the `Shape` constructor in order to support vertex
+    and index lists and make it easier to use.
+  * Changes `FS.readFile()` and `FS.writeFile()` to work directly with strings
+    instead of ArrayBuffers.
+  * Removes support for GPUs without shader support.  If the engine can't create
+    a shader-capable display, it will now simply fail to start rather than trying
+    to fall back on the fixed-function pipeline.
+  * Renames SSJ to SSj, with a lowercase J, to make the name more recognizable.
+  * Renames `Sphere.APIVersion` to `Sphere.Version`.
+  * Fixes several limitations in the internal handling of spritesets which were
+    preventing full Sphere 1.x compatibility.
+  * Fixes several bugs in internal Dispatch job management, including one that
+    can cause the engine to crash with a segfault.
+  * Fixes a bug where setting the clipping box out of bounds has no effect.
+  * Fixes excessive OpenGL state changes in the internal rendering logic, vastly
+    improving performance for games using the Sphere v2 graphics API.
+
+ -- Bruce Pascoe <fatcerberus@icloud.com>  Thu, 20 Jul 2017 00:00:00 -0500
+
 minisphere (4.6.0) trusty; urgency=low
 
   * When using ES6 modules (`.mjs`), the main module can now `export default` a
